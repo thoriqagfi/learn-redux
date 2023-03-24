@@ -1,11 +1,12 @@
 import { Action } from "redux"
-import { ADD_CAKE, BUY_CAKE } from "./cakeTypes"
+import { ADD_CAKE, BUY_CAKE, ADD_CAKE_HOOKS, BUY_CAKE_HOOKS } from "./cakeTypes"
 
-const initialState = {
+export const cakeInitialState = {
   numOfCakes: 10,
+  numOfCakesHooks: 20
 }
 
-export const cakeReducer = (state = initialState, action: Action) => {
+export const cakeReducer = (state = cakeInitialState, action: Action) => {
   switch (action.type) {
     case BUY_CAKE:
       return {
@@ -16,6 +17,16 @@ export const cakeReducer = (state = initialState, action: Action) => {
       return {
         ...state,
         numOfCakes: state.numOfCakes + 1,
+      }
+    case ADD_CAKE_HOOKS:
+      return {
+        ...state,
+        numOfCakesHooks: state.numOfCakesHooks + 1,
+      }
+    case BUY_CAKE_HOOKS:
+      return {
+        ...state,
+        numOfCakesHooks: state.numOfCakesHooks > 0 ? state.numOfCakesHooks - 1 : 0,
       }
     default:
       return state

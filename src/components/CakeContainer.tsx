@@ -1,6 +1,7 @@
 import { Dispatch } from "redux"
 import { addCake, buyCake } from "@/components/redux/cakes/cakeActions"
 import { connect } from "react-redux"
+import { rootState } from "./redux/rootReducer"
 
 interface Cakes {
   numOfCakes: number
@@ -8,9 +9,9 @@ interface Cakes {
   addCake: () => void
 }
 
-const mapStateToProps = (state: Cakes) => {
+const mapStateToProps = (state: rootState) => {
   return {
-    numOfCakes: state.numOfCakes
+    numOfCakes: state.cake.numOfCakes
   }
 }
 
