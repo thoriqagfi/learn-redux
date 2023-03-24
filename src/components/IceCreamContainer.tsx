@@ -1,8 +1,7 @@
-import { CombinedState, Dispatch } from "redux";
+import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import { addIceCream, buyIceCream } from "./redux/iceCream/iceCreamActions";
-import {iceCreamReducer} from "./redux/iceCream/iceCreamReducer";
-import rootReducer, { rootState } from "./redux/rootReducer";
+import { rootState } from "./redux/rootReducer";
 
 interface IceCream {
   numOfIceCreams: number
