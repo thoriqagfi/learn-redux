@@ -1,5 +1,5 @@
 import { Reducer } from "redux";
-import { BUY_CAKE } from "./cakeTypes";
+import { ADD_CAKE, BUY_CAKE } from "./cakeTypes";
 
 export const buyCake = () => {
   return {
@@ -7,3 +7,8 @@ export const buyCake = () => {
   }
 }
 
+export const addCake = () => {
+  return {
+    type: ADD_CAKE
+  }
+}
