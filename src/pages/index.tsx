@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import CakeContainer from '@/components/CakeContainer'
 import HooksCakeContainer from '@/components/HooksCakeContainer'
 import IceCreamContainer from '@/components/IceCreamContainer'
+import NewCakeContainer from '@/components/NewCakeContainer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function Home() {
         <CakeContainer/>
         <HooksCakeContainer/>
         <IceCreamContainer/>
+        <NewCakeContainer/>
       </div>
     </>
   )
